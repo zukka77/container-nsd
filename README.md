@@ -1,6 +1,8 @@
+[![](https://img.shields.io/docker/cloud/build/veovis/nsd.svg)](https://hub.docker.com/r/veovis/nsd) [![](https://img.shields.io/docker/pulls/veovis/nsd.svg)](https://hub.docker.com/r/veovis/nsd) ![](https://img.shields.io/microbadger/image-size/veovis%2Fnsd.svg) [![](https://img.shields.io/github/tag/LordVeovis/docker-nsd.svg)](https://github.com/LordVeovis/docker-nsd/tags) [![](https://img.shields.io/github/license/LordVeovis/docker-nsd.svg)](https://github.com/LordVeovis/docker-nsd/blob/master/LICENSE)
+
 # hardware/nsd-dnssec
 
-![nsd](https://i.imgur.com/tPgkQVB.png "nsd")
+![nsd](https://nlnetlabs.nl/static/logos/NSD/NSD_FC_Shaded_cropped.svg "nsd")
 
 ### What is this?
 
@@ -10,7 +12,7 @@ NSD is an authoritative only, high performance, simple and open source name serv
 
 - Lightweight & secure image (no root process)
 - Based on Alpine Linux
-- Latest NSD version (4.3.4 - Jul 9, 2019)
+- Latest NSD version (4.3.4 - 2020-11-24)
 - ZSK and KSK keys, DS-Records management and zone signature with ldns
 
 ### Ports
