@@ -1,6 +1,6 @@
 [![](https://img.shields.io/docker/cloud/build/veovis/nsd.svg)](https://hub.docker.com/r/veovis/nsd) [![](https://img.shields.io/docker/pulls/veovis/nsd.svg)](https://hub.docker.com/r/veovis/nsd) ![](https://img.shields.io/microbadger/image-size/veovis%2Fnsd.svg) [![](https://img.shields.io/github/tag/LordVeovis/docker-nsd.svg)](https://github.com/LordVeovis/docker-nsd/tags) [![](https://img.shields.io/github/license/LordVeovis/docker-nsd.svg)](https://github.com/LordVeovis/docker-nsd/blob/master/LICENSE)
 
-# hardware/nsd-dnssec
+# veovis/nsd
 
 ![nsd](https://nlnetlabs.nl/static/logos/NSD/NSD_FC_Shaded_cropped.svg "nsd")
 
