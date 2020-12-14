@@ -10,27 +10,20 @@ NSD is an authoritative only, high performance, simple and open source name serv
 
 - Lightweight & secure image (no root process)
 - Based on Alpine Linux
-- Latest NSD version (4.2.1 - Jul 9, 2019)
+- Latest NSD version (4.3.4 - Jul 9, 2019)
 - ZSK and KSK keys, DS-Records management and zone signature with ldns
-
-### Build-time variables
-
-- **NSD_VERSION** : version of NSD
-- **GPG_SHORTID** : short gpg key ID
-- **GPG_FINGERPRINT** : fingerprint of signing key
-- **SHA256_HASH** : SHA256 hash of NSD archive
 
 ### Ports
 
-- **53/tcp**
-- **53/udp** (for AXFR zones transfer queries)
+- **53/tcp** (for AXFR zones transfer queries)
+- **53/udp**
 
 ### Environment variables
 
-| Variable | Description | Type | Default value |
-| -------- | ----------- | ---- | ------------- |
-| **UID** | nsd user id | *optional* | 991
-| **GID** | nsd group id | *optional* | 991
+| Variable | Description  | Type       | Default value |
+| -------- | ------------ | ---------- | ------------- |
+| **UID**  | nsd user id  | *optional* | 991           |
+| **GID**  | nsd group id | *optional* | 991           |
 
 ### Setup
 
@@ -137,8 +130,8 @@ Check your zone and nsd configuration:
 
 ```
 cd /mnt/docker/nsd
-docker run --rm -v `pwd`/zones:/zones -ti hardware/nsd-dnssec nsd-checkzone domain.tld /zones/db.domain.tld
-docker run --rm -v `pwd`/conf:/etc/nsd -ti hardware/nsd-dnssec nsd-checkconf /etc/nsd/nsd.conf
+docker run --init --rm -v `pwd`/zones:/zones -ti hardware/nsd-dnssec nsd-checkzone domain.tld /zones/db.domain.tld
+docker run --init --rm -v `pwd`/conf:/etc/nsd -ti hardware/nsd-dnssec nsd-checkconf /etc/nsd/nsd.conf
 ```
 
 ### Docker-compose
