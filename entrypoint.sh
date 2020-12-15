@@ -6,4 +6,4 @@ fi
 
 chown -R $UID:$GID /var/db/nsd/ /etc/nsd
 
-exec $@
+exec "$@"
