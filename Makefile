@@ -16,18 +16,18 @@ init:
 	sleep 2
 
 	docker run \
-		-d \
+		-d --init -t \
 		--name nsd_unsigned \
 		-v "`pwd`/test/config/nsd.conf":/etc/nsd/nsd.conf \
 		-v "`pwd`/test/config/db.example.org":/zones/db.example.org \
-		-t $(NAME)
+		$(NAME)
 
 	docker run \
-		-d \
+		-d --init -t \
 		--name nsd_default \
 		-v "`pwd`/test/config/nsd.conf":/etc/nsd/nsd.conf \
 		-v "`pwd`/test/config/db.example.org":/zones/db.example.org \
-		-t $(NAME)
+		$(NAME)
 
 fixtures:
 	docker exec nsd_default keygen example.org
