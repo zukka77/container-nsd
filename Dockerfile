@@ -10,7 +10,7 @@ RUN set -xe; \
    install -d /var/db/nsd -o 991 -g 991 -m 755; \
    addgroup -S -g $GID nsd; \
    adduser -S -D -h /var/db/nsd -G nsd -u $UID -g nsd nsd; \
-   apk add --no-cache nsd ca-certificates openssl su-exec
+   apk add --no-cache nsd ca-certificates openssl ldns-tools
 
 COPY entrypoint.sh /sbin/entrypoint.sh
 COPY bin /usr/local/bin
