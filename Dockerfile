@@ -1,9 +1,9 @@
-FROM alpine:3.12
+FROM alpine:3.15
 
 LABEL description "Simple DNS authoritative server with DNSSEC support" \
       maintainer="Veovis <veovis@kveer.fr>"
 
-ARG NSD_VERSION=4.3.4
+ARG NSD_VERSION=4.3.8
 ENV UID=991 GID=991
 
 RUN set -xe; \
@@ -14,6 +14,7 @@ RUN set -xe; \
 
 COPY entrypoint.sh /sbin/entrypoint.sh
 COPY bin /usr/local/bin
+
 VOLUME /zones /etc/nsd /var/db/nsd
 EXPOSE 53 53/udp
 ENTRYPOINT [ "/sbin/entrypoint.sh" ]
