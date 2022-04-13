@@ -1,33 +1,33 @@
-[![](https://img.shields.io/docker/cloud/build/veovis/nsd.svg?style=flat-square)](https://hub.docker.com/r/veovis/nsd) [![](https://img.shields.io/travis/LordVeovis/docker-nsd?style=flat-square&label=travis)](https://travis-ci.org/github/LordVeovis/docker-nsd) [![](https://img.shields.io/docker/pulls/veovis/nsd?style=flat-square)](https://hub.docker.com/r/veovis/nsd) ![](https://img.shields.io/microbadger/image-size/veovis%2Fnsd?style=flat-square) [![](https://img.shields.io/github/tag/LordVeovis/docker-nsd?style=flat-square)](https://github.com/LordVeovis/docker-nsd/tags) [![](https://img.shields.io/github/license/LordVeovis/docker-nsd?style=flat-square)](https://github.com/LordVeovis/docker-nsd/blob/master/LICENSE)
+[![](https://img.shields.io/circleci/build/github/LordVeovis/docker-nsd?style=flat-square)](https://app.circleci.com/pipelines/github/LordVeovis/docker-nsd) [![](https://img.shields.io/travis/LordVeovis/docker-nsd?style=flat-square&label=travis)](https://travis-ci.org/github/LordVeovis/docker-nsd) [![](https://img.shields.io/docker/pulls/veovis/nsd?style=flat-square)](https://hub.docker.com/r/veovis/nsd) [![](https://img.shields.io/github/tag/LordVeovis/docker-nsd?style=flat-square)](https://github.com/LordVeovis/docker-nsd/tags) [![](https://img.shields.io/github/license/LordVeovis/docker-nsd?style=flat-square)](https://github.com/LordVeovis/docker-nsd/blob/master/LICENSE)
 
 # veovis/nsd
 
 ![nsd](https://nlnetlabs.nl/static/logos/NSD/NSD_FC_Shaded_cropped.svg "nsd")
 
-### What is this?
+## What is this?
 
 NSD is an authoritative only, high performance, simple and open source name server.
 
-### Features
+## Features
 
 - Lightweight & secure image (no root process)
 - Based on Alpine Linux
 - Latest NSD version (4.3.8 - 2021-10-12)
 - ZSK and KSK keys, DS-Records management and zone signature with ldns
 
-### Ports
+## Ports
 
 - **53/tcp** (for AXFR zones transfer queries)
 - **53/udp**
 
-### Environment variables
+## Environment variables
 
 | Variable | Description  | Type       | Default value |
 | -------- | ------------ | ---------- | ------------- |
 | **UID**  | nsd user id  | *optional* | 991           |
 | **GID**  | nsd group id | *optional* | 991           |
 
-### Setup
+## Setup
 
 Put your dns zone file in `/mnt/docker/nsd/zones/db.domain.tld`.
 
@@ -136,9 +136,9 @@ docker run --init --rm -v `pwd`/zones:/zones -ti hardware/nsd-dnssec nsd-checkzo
 docker run --init --rm -v `pwd`/conf:/etc/nsd -ti hardware/nsd-dnssec nsd-checkconf /etc/nsd/nsd.conf
 ```
 
-### Docker-compose
+## Docker-compose
 
-#### Docker-compose.yml
+### Docker-compose.yml
 
 ```yaml
 nsd:
@@ -155,13 +155,13 @@ nsd:
 
 **Note** : replace `PUBLIC_IP_ADDRESS` with your public IP address.
 
-#### Run it
+### Run it
 
 ```
 docker-compose up -d
 ```
 
-### Generating DNSSEC keys and signed zone
+## Generating DNSSEC keys and signed zone
 
 Generate ZSK and KSK keys with ECDSAP384SHA384 algorithm (it may take some time; you can install `haveged` in your base system to speed it up):
 
