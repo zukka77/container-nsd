@@ -5,7 +5,7 @@ executors:
     environment:
       IMAGE_NAME: veovis/nsd
     docker:
-      - image: circleci/buildpack-deps:stretch
+      - image: cimg/base:current
 
 jobs:
   build:
