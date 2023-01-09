@@ -1,9 +1,9 @@
-FROM alpine:3.15
+FROM alpine:3.17
 
 LABEL description "Simple DNS authoritative server with DNSSEC support" \
       maintainer="Veovis <veovis@kveer.fr>"
 
-ARG NSD_VERSION=4.3.8
+ARG NSD_VERSION=4.6.1
 ENV UID=991 GID=991
 
 RUN set -xe; \
