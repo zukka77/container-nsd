@@ -1,4 +1,9 @@
-[![](https://img.shields.io/circleci/build/github/LordVeovis/docker-nsd?style=flat-square)](https://app.circleci.com/pipelines/github/LordVeovis/docker-nsd) [![](https://img.shields.io/travis/LordVeovis/docker-nsd?style=flat-square&label=travis)](https://travis-ci.org/github/LordVeovis/docker-nsd) [![](https://img.shields.io/docker/pulls/veovis/nsd?style=flat-square)](https://hub.docker.com/r/veovis/nsd) [![](https://img.shields.io/github/tag/LordVeovis/docker-nsd?style=flat-square)](https://github.com/LordVeovis/docker-nsd/tags) [![](https://img.shields.io/github/license/LordVeovis/docker-nsd?style=flat-square)](https://github.com/LordVeovis/docker-nsd/blob/master/LICENSE)
+[![](https://img.shields.io/circleci/build/github/LordVeovis/docker-nsd?style=flat-square)](https://app.circleci.com/pipelines/github/LordVeovis/docker-nsd)
+[![](https://img.shields.io/travis/LordVeovis/docker-nsd?style=flat-square&label=travis)](https://travis-ci.org/github/LordVeovis/docker-nsd)
+[![](https://img.shields.io/docker/pulls/veovis/nsd?style=flat-square)](https://hub.docker.com/r/veovis/nsd)
+![](https://img.shields.io/docker/image-size/veovis/clamav?style=flat-square)
+[![](https://img.shields.io/github/tag/LordVeovis/docker-nsd?style=flat-square)](https://github.com/LordVeovis/docker-nsd/tags)
+[![](https://img.shields.io/github/license/LordVeovis/docker-nsd?style=flat-square)](https://github.com/LordVeovis/docker-nsd/blob/master/LICENSE)
 
 # veovis/nsd
 
