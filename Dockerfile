@@ -1,7 +1,7 @@
 FROM alpine:3.19
 
 LABEL description "Simple DNS authoritative server with DNSSEC support" \
-      maintainer="Veovis <veovis@kveer.fr>"
+      org.opencontainers.image.authors="Veovis <veovis@kveer.fr>"
 
 ARG NSD_VERSION=4.7.0
 ENV UID=991 GID=991
